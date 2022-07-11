@@ -1,0 +1,10 @@
+git clone <repo path>
+
+git status
+git diff
+
+git add .
+git commit -m "message"
+git push origin <branch name>
+
+git pull origin <branch name>
