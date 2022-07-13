@@ -8,63 +8,258 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        *{
-            margin: 0;
+        .spyre-navbar {
+            height: 80px;
+        }
+        .fixed-top {
+            position: fixed;
+            z-index: 1030;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+        .align-items-center {
+            align-items: center!important;
+        }
+        .navbar {
+            display: flex;
+            padding: 0.5rem 1rem;
+        }
+        .spyre-navbar .navbar-brand {
+            margin-top: 20px;
+        }
+        .navbar-dark .navbar-brand {
+            color: #fff;
+        }
+        .mr-lg-5, .mx-lg-5 {
+            margin-right: 3rem!important;
+        }
+        .spyre-navbar .navbar-text {
+            font-family: Oswald,'Helvetica Neue',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+            font-size: 1rem;
+            font-weight: 500;
+            position: relative;
+            transition: color .5s ease;
+        }
+        .text-white {
+            color: #fff!important;
+        }
+        .d-md-inline-block {
+            display: inline-block!important;
+        }
+        .search {
+            position: relative;
+        }
+        .ml-auto, .mx-auto {
+            margin-left: auto!important;
+        }
+        .mr-2, .mx-2 {
+            margin-right: 0.5rem!important;
+        }
+        .justify-content-end {
+            justify-content: flex-end!important;
+        }
+        .d-lg-flex {
+            display: flex!important;
+        }
+        .search .form-control {
+            font-size: 30px;
+            font-weight: 700;
+            position: absolute;
+            right: 50px;
+            width: 0;
             padding: 0;
+            transition: width .5s ease-in-out;
+            color: #fff;
+            border: none;
+            background: 0 0;
         }
-        .background {
-            background: rgba(0,0,0,0.7) url("https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
-            background-size:cover;
-            background-blend-mode: darken;
+        .search i {
+            font-size: 2.3rem;
+            cursor: pointer;
+            color: #fff;
         }
-        .overflow-hidden{
-            height: 100vh;
+        .faq .card-header button::before, .spyre-nav-link.dropdown-toggle::after, .zmdi {
+            font-family: Material-Design-Iconic-Font;
+            font-weight: 400;
+            font-style: normal;
+            display: inline-block;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .bg-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: hidden;
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            backface-visibility: hidden;
+        }
+
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        body {
+            font-family: Roboto, 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 0;
+            text-align: left;
+            color: #1a1e2c;
+            background-color: #fff;
+        }
+
+        :root {
+            --blue: #007bff;
+            --indigo: #6610f2;
+            --purple: #6f42c1;
+            --pink: #e83e8c;
+            --red: #f55454;
+            --orange: #fd7e14;
+            --yellow: #fbcc5d;
+            --green: #2ecd75;
+            --teal: #20c997;
+            --cyan: #41c6f2;
+            --white: #fff;
+            --gray: #6c757d;
+            --gray-dark: #343a40;
+            --blue-light: #f3f8fc;
+            --primary: #f12639;
+            --secondary: #1f2749;
+            --success: #2ecd75;
+            --info: #41c6f2;
+            --warning: #fbcc5d;
+            --danger: #f55454;
+            --light: #f5f5f5;
+            --dark: #343a40;
+            --breakpoint-xs: 0;
+            --breakpoint-sm: 576px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 992px;
+            --breakpoint-xl: 1200px;
+            --breakpoint-xxl: 1600px;
+            --font-family-sans-serif: 'Roboto', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+        }
+
+        .bg-container.overlay::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            background-color: rgba(31, 39, 73, .5);
+        }
+
+        .overlay-60::before {
+            background-color: rgba(31, 39, 73, .6) !important;
+        }
+
+        .container, .container-lg, .container-md, .container-sm {
+            max-width: 960px;
+        }
+
+        .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 15px;
+            padding-left: 15px;
         }
     </style>
 
 </head>
 <body>
-<nav class="navbar background">
-    <div class="container-fluid">
+<nav class="spyre-navbar navbar navbar-expand-lg bg-secondary navbar-dark fixed-top align-items-center"
+     data-transparent="" data-text-color="#ffffff" style="background-color: rgba(31, 39, 73, 0)!important;">
+    <div class="container">
         <a class="navbar-brand mr-lg-5 mr-xl-7" href="#">
-            <img src="https://spyre-theme.bitbucket.io/v1.4.0/assets/img/logo.svg" class="d-none d-lg-block" alt="Spyre"
-                 width="183">
+            <img src="https://spyre-theme.bitbucket.io/v1.4.0/assets/img/logo.svg" class="d-none d-lg-block" alt="Spyre" width="183">
+            <img src="https://spyre-theme.bitbucket.io/v1.4.0/assets/img/logo.svg" class="d-block d-lg-none" alt="Spyre" width="150">
         </a>
-        <span class="navbar-text flex-fill d-none d-md-inline-block text-white">
-                    Contact us: <a href="#" class="pl-2 text-dark">info@spyre.com</a><a href="#" class="pl-5 text-dark">+1-202-555-0149</a>
+
+        <span class="navbar-text flex-fill d-none d-md-inline-block text-white" style="z-index: 0;">
+                    Contact us: <a href="#" class="pl-2 text-white" style="">info@spyre.com</a><a href="#" class="pl-5 text-white" style="">+1-202-555-0149</a>
                 </span>
 
-        <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
-<section class="py-0 overflow-hidden text-center background ">
-    <div class="bg-container overlay overlay-60 parallax" data-rellax-percentage="0.5" style="background-image: url(#); transform: translate3d(0px, 0px, 0px);"></div>
-    <div class="container">
-        <div class="row h-100vh justify-content-center align-items-center">
-            <div class="col-lg-8">
-                <h1 class="text-white text-uppercase fs-5 fs-lg-7 aos-init aos-animate" data-aos="fade-down" data-aos-duration="1000">Spyre</h1>
-                <p class="mb-5 fs-lg-1 text-white aos-init aos-animate" data-aos="fade-down" data-aos-delay="50" data-aos-duration="1000">Slick contemporary multipurpose theme</p>
-                <div class="row justify-content-center">
-                    <div class="col-auto">
-                        <a href="#" class="btn btn-primary mx-2 px-5 mb-3 aos-init aos-animate" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-smooth-scroll="" data-smooth-scroll-hash="false">Explore Demos</a>
-                    </div>
-                    <div class="col-auto">
-                        <a href="https://themes.getbootstrap.com/product/spyre-slick-contemporary-multipurpose-theme/" target="_blank" class="btn btn-light px-5 mx-2 aos-init aos-animate" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">Purchase Now<i class="zmdi zmdi-long-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="search d-none d-lg-flex justify-content-end ml-auto mr-2">
+            <input class="form-control mr-2" type="text">
+            <i class="zmdi zmdi-search"></i>
+        </div>
 
-            <div class="move d-none d-lg-block">
-                <a href="#" class="text-white" data-smooth-scroll="" data-smooth-scroll-hash="false">
-                    <i class="zmdi zmdi-long-arrow-down zmdi-hc-2x"></i>
-                </a>
+        <div class="menu-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="cross">
+                <span></span>
+                <span></span>
             </div>
         </div>
     </div>
-</section>
+<!--    <div class="container-fluid">-->
+<!--        <a class="navbar-brand mr-lg-5 mr-xl-7" href="#">-->
+<!--            <img src="https://spyre-theme.bitbucket.io/v1.4.0/assets/img/logo.svg" class="d-none d-lg-block" alt="Spyre"-->
+<!--                 width="183">-->
+<!--        </a>-->
+<!--        <span class="navbar-text flex-fill d-none d-md-inline-block text-white">-->
+<!--                    Contact us: <a href="#" class="pl-2 text-white">info@spyre.com</a><a href="#"-->
+<!--                                                                                         class="pl-5 text-white">+1-202-555-0149</a>-->
+<!--                </span>-->
 
+<!--        <form class="d-flex" role="search">-->
+<!--            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--        </form>-->
+<!--    </div>-->
+</nav>
+<!--End of Header-->
+<!--Main Content-->
+<main class="main minh-100vh">
+    <!-- Section -->
+
+    <section class="py-0 overflow-hidden text-center">
+        <div class="bg-container overlay overlay-60 parallax" data-rellax-percentage="0.5"
+             style="background-image: url(https://spyre-theme.bitbucket.io/v1.4.0/assets/img/backgrounds/bg-15.jpg);transform: translate3d(0px, 0px, 0px);"></div>
+        <div class="container">
+            <div class="row h-100vh justify-content-center align-items-center">
+<!--                <div class="col-lg-8">-->
+<!--                    <h1 class="text-white text-uppercase fs-5 fs-lg-7 aos-init aos-animate" data-aos="fade-down"-->
+<!--                        data-aos-duration="1000">Spyre</h1>-->
+<!--                    <p class="mb-5 fs-lg-1 text-white aos-init aos-animate" data-aos="fade-down" data-aos-delay="50"-->
+<!--                       data-aos-duration="1000">Slick contemporary multipurpose theme</p>-->
+<!--                    <div class="row justify-content-center">-->
+<!--                        <div class="col-auto">-->
+<!--                            <a href="#section-4" class="btn btn-primary mx-2 px-5 mb-3 aos-init aos-animate"-->
+<!--                               data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000" data-smooth-scroll=""-->
+<!--                               data-smooth-scroll-hash="false">Explore Demos</a>-->
+<!--                        </div>-->
+<!--                        <div class="col-auto">-->
+<!--                            <a href="https://themes.getbootstrap.com/product/spyre-slick-contemporary-multipurpose-theme/"-->
+<!--                               target="_blank" class="btn btn-light px-5 mx-2 aos-init aos-animate" data-aos="fade-down"-->
+<!--                               data-aos-delay="100" data-aos-duration="1000">Purchase Now<i-->
+<!--                                    class="zmdi zmdi-long-arrow-right ml-2"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+        </div>
+    </section>
+</main>
 </body>
 </html>
