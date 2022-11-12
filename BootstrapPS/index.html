@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, culpa. Sequi natus corporis odit error libero laborum, molestiae veniam tempora">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Bootstrap Practice Set</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand text-dark fw-bold" href="/index.html">BOOTSTRAP PRACTICE SET</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header d-flex">
+          <h5 class="offcanvas-title fw-bold" id="offcanvasNavbarLabel">Explore</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div>
+          <form class="d-flex mt-1" role="search">
+            <input class="form-control me-4" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary me-4" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-5 ">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" aria-current="page" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="/Blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="/Prising.html">Prising</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-light">
+                <li><a class="dropdown-item fw-bold" href="#">Action</a></li>
+                <li><a class="dropdown-item fw-bold" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item fw-bold" href="#">Something else here</a>
+                </li>
+              </ul>
+              <div`>
+                <a href="/Signup.html" class="btn btn-primary d-gred " type="button">Sign-up</a>
+                <a href="/Login.html" class="btn btn-primary d-gred" type="button">Log-in</a>
+        </div>
+        </li>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Carousel -->
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"
+        aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img" width="1200" height="650" src="image 1.jpg" alt="">
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" width="1200" height="650" src="image 2.jpg" alt="">
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img" width="1140" height="650" src="image 5.jpg" alt="">
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- End Carousel -->
+
+  <div class="container my-4">
+    <div class="text-center pt-md-4 pb-2">
+      <h2><span class="fw-light">Explore</span>Bootstrap</h2>
+      <p class="text-muted">What can you do with Bootstrap Practice Set?</p>
+    </div>
+    <div class="container mt-4">
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Change the background</h2>
+            <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then,
+              mix
+              and match with additional component themes and more.</p>
+            <button class="btn btn-outline-light" type="button">Example button</button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Add borders</h2>
+            <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure
+              to
+              look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's
+              content for equal-height.</p>
+            <button class="btn btn-outline-secondary" type="button">Example button</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- START THE FEATURETTES -->
+  <div class="container ">
+    <div class="row featurette align-items-center d-flex">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your
+            mind.</span></h2>
+        <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img width="400" height="350" src="image 3.jpg" alt="HTML Image.jpg">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette align-items-center d-flex">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for
+            yourself.</span></h2>
+        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this
+          layout would work with some actual real-world content in place.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img width="380" height="350" src="image 4.jpg" alt="HTML Image.jpg">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+  </div>
+  <!-- /END THE FEATURETTES -->
+
+  <!-- Cartzilla features section-->
+
+  <div class="container py-3 py-lg-4 my-4 ">
+    <h2 class="text-center mb-4 ">Cartzilla Feature <span class="fw-light">Highlights</span></h2>
+    <div class="row text-center pt-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/01.png" width="90" alt="Gulp icon">
+        <h6>Kick-start Your Development</h6>
+        <p class="fs-ms text-muted mb-0">Start your development process fast and easy with Node.js and Gulp setup.
+          Configuration files are included in download package. Full tasks automation.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/02.png" width="90" alt="Sass icon">
+        <h6>Easy to Customize with Sass</h6>
+        <p class="fs-ms text-muted mb-0">Cartzilla is built using Sass. Easily change colors, typography and much
+          more. It is the most mature, stable, and powerful CSS extension language in the world.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/03.png" width="90" alt="Pug icon">
+        <h6>Pug - Node Templating Engine</h6>
+        <p class="fs-ms text-muted mb-0">No need to write huge amount of HTML, if you don’t want to. Pug provides
+          features not available in plain HTML like variables, includes, mixins, functions, etc.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/04.png" width="90" alt="Bootstrap icon">
+        <h6>Built With Bootstrap 5</h6>
+        <p class="fs-ms text-muted mb-0">Cartzilla is the powerful e-commerce front-end solution based on Bootstrap
+          5 - the world's most popular responsive, mobile-first front-end component library.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/05.png" width="90" alt="Web Components icon">
+        <h6>40+ Flexible Components</h6>
+        <p class="fs-ms text-muted mb-0">Besides styling all default Bootstrap 5 components Cartzilla introduces
+          lots of new flexible, customizable and reusable elements you can use across the website.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/06.png" width="90" alt="Mobile Friendly icon">
+        <h6>Mobile Friendly Interface</h6>
+        <p class="fs-ms text-muted mb-0">It's not a surprise that nowadays over 70% of users shop online using their
+          mobile devices. Cartzilla is 100% responsive and optimized for small touch screens.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/07.png" width="90" alt="Google Fonts icon">
+        <h6>Google Fonts</h6>
+        <p class="fs-ms text-muted mb-0">Cartzilla uses Google fonts which are free, fast to load and of very high
+          quality. Currently Google fonts library includes 870+ font families to choose from.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/08.png" width="90" alt="Touch icon">
+        <h6>Touch-enabled Sliders</h6>
+        <p class="fs-ms text-muted mb-0">In the era of touch screens it's important to ensure great user experience
+          on handheld devices, especially when it comes to such frequently used interface component as slider.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/09.png" width="90" alt="Vector icon">
+        <h6>Vector Based HD Ready Icons</h6>
+        <p class="fs-ms text-muted mb-0">Cartzilla is equiped with font-based icon pack to ensure that infographics
+          and interface icons look sharp on any device with any screen resolution and pixel density.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/10.png" width="90" alt="HTML5 icon">
+        <h6>W3C Valid HTML Code</h6>
+        <p class="fs-ms text-muted mb-0">All HTML files are checked via W3C validator to ensure 100% valid code. As
+          you probably know invalid HTML limits innovation, but Cartzilla is innovative at its core.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/11.png" width="90" alt="JavaScript icon">
+        <h6>Future-proof JavaScript</h6>
+        <p class="fs-ms text-muted mb-0">Cartzilla core scripts as well as all dependencies are written in vanilla
+          JS. And now with Bootstrap 5 we finally drops jQuery and uses ES6 modules.</p>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter pb-2"><img class="inline-block mb-3"
+          src="https://cartzilla.createx.studio/img/intro/features/12.png" width="90" alt="Documentation icon">
+        <h6>Detailed Documentation</h6>
+        <p class="fs-ms text-muted mb-0">Download package includes links to online documentation. It covers all
+          crucial information about how to get started, customize template and components usage.</p>
+      </div>
+    </div>
+    <h6 class="text-center">And much more...</h6>
+  </div>
+
+  <!-- End Cartzilla features section-->
+
+  <!-- Pricing -->
+  <!-- <div class="container py-3">
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal">Pricing</h1>
+      <p class="fs-5 text-muted">Quickly build an effective pricing table for your potential customers with this
+        Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+    </div>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Free</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>10 users included</li>
+                <li>2 GB of storage</li>
+                <li>Email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+              <h4 class="my-0 fw-normal">Pro</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>20 users included</li>
+                <li>10 GB of storage</li>
+                <li>Priority email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-primary">
+            <div class="card-header py-3 text-bg-primary border-primary">
+              <h4 class="my-0 fw-normal">Enterprise</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$29<small class="text-muted fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>30 users included</li>
+                <li>15 GB of storage</li>
+                <li>Phone and email support</li>
+                <li>Help center access</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div> -->
+  <!-- End Pricing -->
+
+  <!-- Footer -->
+
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+      </ul>
+      <p class="text-center text-muted">© 2022 Company, Inc</p>
+    </footer>
+  </div>
+
+  <!-- End Footer -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
